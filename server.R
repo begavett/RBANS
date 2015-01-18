@@ -34,7 +34,7 @@ shinyServer(function(input, output) {
     names(f.scores) <- c("Visual","Global")
     f.scores <- f.scores[c("Global","Visual")]
     rownames(f.scores) <- "Standard Score"
-    return(data.frame(round(f.scores*15+100,3)))
+    return(data.frame(round(f.scores*15.38765+89.31138,3)))
   })
   output$FScores <- renderTable({FScores()})
   #output$VisualPro <- renderText({paste("Visual Production : ", VisualPro())})
